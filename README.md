@@ -1,3 +1,6 @@
-TODO: make this work proper
+v1.0.0!!
 
-currently just asks for an input and replies with instructions on how to do something i haven't coded yet
+added all of the quotes
+added actual test
+made it so you don't have to capitalise the same as the answers
+linked up the "choose which part of the test you want" to the test
