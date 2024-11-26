@@ -1,3 +1,8 @@
+v1.0.1
+todo: exe is broken (sometimes, idk) pls fix 
+added mid-quiz resetting
+refactored code for very little repition
+
 v1.0.0!!
 
 added all of the quotes <br /> 
