@@ -15,6 +15,7 @@ internal class Program
         int quotenum = 0;
         int quotemax = 30;
         int quotesdone = 0;
+        var currentColor = Console.ForegroundColor;
         string judgement;
         string[] quotestart = [
                 "Fair is foul, ",
@@ -165,7 +166,12 @@ internal class Program
             }
             else
             {
-                Console.WriteLine(quotestart[quotenum] + quoteend[quotenum]);
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write(quotestart[quotenum]);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(quoteend[quotenum]);
+                Console.ForegroundColor = currentColor;
+
             }
             quotenum++;
         }
