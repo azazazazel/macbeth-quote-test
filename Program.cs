@@ -67,7 +67,7 @@ internal class Program
             "cribbed, confined, bound by saucy doubts and fears",
             "in so far, that should I wade no more, returning were as tedious as go o'er",
             "and trouble, fire burn and cauldron bubble",
-            "the Thane of Fife",
+            "Macduff, beware the Thane of Fife",
             "woman born shall harm Macbeth",
             "vanquished be, until Great Birnam wood to high Dunsinane hill shall come against him",
             "spot, out, I say",
