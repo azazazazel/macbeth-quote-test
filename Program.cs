@@ -1,14 +1,5 @@
-﻿using System;
-using System.Diagnostics.Metrics;
-using System.Diagnostics;
-using System.Numerics;
-using System.Reflection.Metadata;
-using System.Security.Cryptography;
-using System.Text.RegularExpressions;
-using System.Xml.XPath;
-using System.ComponentModel.Design;
-using static System.Net.Mime.MediaTypeNames;
-using System.Linq;
+﻿using System.Diagnostics;
+
 internal class Program
 {
     private static void Main()
@@ -24,7 +15,7 @@ internal class Program
         int quotenum = 0;
         int quotemax = 30;
         int quotesdone = 0;
-        string judgement = "";
+        string judgement;
         string[] quotestart = [
                 "Fair is foul, ",
                 "The instruments of darkness ",
@@ -40,10 +31,10 @@ internal class Program
                 "Most sacrilegious murder ", // eoa2 / 11
                 "Nought’s had, ",
                 "O, full of  ",
-                "Be innocent",
-                "But now I am cabined,",
-                "I am in blood stepped", // eoa3 / 16
-                "Double, double, toil",
+                "Be innocent ",
+                "But now I am cabined, ",
+                "I am in blood stepped ", // eoa3 / 16
+                "Double, double, toil ",
                 "Macbeth: beware ",
                 "None of ",
                 "Macbeth shall never ", // eoa4 / 20
@@ -97,41 +88,37 @@ internal class Program
                 Console.WriteLine("" +
                     "You have chosen Act " + actchoice + ". \n" +
                     "Finish the quotes (Capitalisation doesn't matter).");
+                continueLooping = false;
 
                 if (actchoice == "1")
                 {
-                    continueLooping = false;
+                    Process.Start("http://www.google.com");
                     quotenum = 0;
                     quotemax = 7;
                 }
                 else if (actchoice == "2")
                 {
-                    continueLooping = false;
                     quotenum = 8;
                     quotemax = 11;
                 }
 
                 else if (actchoice == "3")
                 {
-                    continueLooping = false;
-                    quotenum = 9;
+                    quotenum = 12;
                     quotemax = 16;
                 }
 
                 else if (actchoice == "4")
                 {
-                    continueLooping = false;
                     quotenum = 17;
                     quotemax = 20;
                 }
 
                 else if (actchoice == "5")
                 {
-                    continueLooping = false;
                     quotenum = 21;
                     quotemax = 30;
                 }
-
             }
 
 
@@ -170,6 +157,8 @@ internal class Program
             quotesdone++;
             Console.WriteLine("#" + quotesdone + ":" + quotestart[quotenum]);
             string answer = Console.ReadLine()!;
+            if (answer.ToLower() == "menu" || answer.ToLower() == "reset" || answer.ToLower() == "reload" || answer.ToLower() == "quit")
+                Main();
             if (answer.ToLower() == quoteend[quotenum].ToLower())
             {
                 result++;
@@ -180,7 +169,7 @@ internal class Program
             }
             quotenum++;
         }
-        
+
         if (result == quotesdone)
             judgement = "Perfect, Congratulations!";
         else if (result == 0)
