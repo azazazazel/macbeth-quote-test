@@ -1,5 +1,8 @@
-v1.0.1 <br /> 
-todo: exe is broken (sometimes, idk) pls fix <br /> 
+v1.2.0 <br />
+added colours after correction
+fixed "macbeth: beware macduff: beware the thane of fife" being misquoted
+
+v1.1.0 <br /> 
 added mid-quiz resetting <br /> 
 refactored code for very little repition <br /> 
 
