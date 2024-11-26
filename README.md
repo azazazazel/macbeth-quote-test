@@ -1,6 +1,6 @@
 v1.2.0 <br />
-added colours after correction
-fixed "macbeth: beware macduff: beware the thane of fife" being misquoted
+added colours after correction <br />
+fixed "macbeth: beware macduff: beware the thane of fife" being misquoted <br />
 
 v1.1.0 <br /> 
 added mid-quiz resetting <br /> 
